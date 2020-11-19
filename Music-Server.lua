@@ -5,7 +5,7 @@ local modem = component.modem
 local rs = component.redstone
 modem.broadcast(69,"Check")
 modem.open(69)
-function "Switch" (...)
+function Switch (...)
   -- accepts both number as well as string
 choice = choice and tonumber(choice) or choice     -- returns a number if the choic is a number or string.
 
