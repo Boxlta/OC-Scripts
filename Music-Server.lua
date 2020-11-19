@@ -5,6 +5,7 @@ local modem = component.modem
 local rs = component.redstone
 modem.broadcast(69,"Check")
 modem.open(69)
+::Listen::
 local function Switch(...)
   -- accepts both number as well as string
 choice = choice and tonumber(choice) or choice     -- returns a number if the choic is a number or string.
@@ -366,8 +367,7 @@ case =
    end,
  }
 end
-::Listen::
 local _, _, from, port, _, message = event.pull("modem_message")
 print("Received data from Robot With Message" .. message)
 Switch(message)
-:Kill:
+::Kill::
